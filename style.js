@@ -41,20 +41,33 @@ btns.forEach((e)=>{
             b = calCount.innerHTML;
             switch(amalCount.innerHTML){
                 case '+':{
-                    return calCount.innerHTML = Number(a) + Number(b)
+                    return (
+                        calCount.innerHTML = Number(a) + Number(b),
+                        a='',
+                        b='',
+                        amalCount.innerHTML=''
+                    )
                 }break
                 case '-':{
-                    return calCount.innerHTML =  Number(a) - Number(b)
+                    return calCount.innerHTML =  Number(a) - Number(b),
+                    a='',
+                    b='',
+                    amalCount.innerHTML=''
                 }break
                 case '/':{
-                    return calCount.innerHTML =  Number(a) / Number(b)
+                    return calCount.innerHTML =  Number(a) / Number(b),
+                    a='',
+                    b='',
+                    amalCount.innerHTML=''
                 }break
                 case 'x':{
-                    return  calCount.innerHTML =  Number(a) * Number(b)
+                    return  calCount.innerHTML =  Number(a) * Number(b),
+                    a='',
+                    b='',
+                    amalCount.innerHTML=''
                 }break
                 default:return 'not found...'
             }
-            
         }
     })
 })
